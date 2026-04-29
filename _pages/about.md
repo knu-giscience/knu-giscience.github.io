@@ -171,7 +171,7 @@ latest_posts:
 <div class="lab-slideshow" aria-label="Lab life">
   {% assign all_slides = "" | split: "" %}
   {% for f in site.static_files %}
-    {% if f.path contains '/assets/img/slideshow/' and f.extname != '' %}
+    {% if f.path contains '/assets/img/slideshow/' and f.extname == '.jpg' %}
       {% assign all_slides = all_slides | push: f %}
     {% endif %}
   {% endfor %}
