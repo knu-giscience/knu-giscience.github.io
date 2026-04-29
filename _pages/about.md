@@ -57,7 +57,7 @@ latest_posts:
     font-family: "Roboto Slab", Georgia, serif;
     font-size: 0.85rem;
     letter-spacing: 0.18em;
-    color: #b7791f;
+    color: #2c3260;
     margin-bottom: 0.5rem;
     font-weight: 700;
   }
@@ -91,7 +91,7 @@ latest_posts:
     transition: border-bottom-color .15s ease;
   }
   .home-cta a:hover { border-bottom-color: currentColor; }
-  .home-cta .arrow { color: #b7791f; margin-right: 0.3rem; font-weight: 700; }
+  .home-cta .arrow { color: #2c3260; margin-right: 0.3rem; font-weight: 700; }
 
   /* Tweaks for the auto-rendered news / selected publications headings */
   article > h2 {

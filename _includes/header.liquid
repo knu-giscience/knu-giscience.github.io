@@ -2,23 +2,16 @@
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}/">
-        {% if site.title == 'blank' %}
-          {% if site.first_name %}
-            <span class="font-weight-bold">
-              {{- site.first_name -}}
-            </span>
-          {% endif %}
-          {% if site.middle_name %}
-            {{- site.middle_name -}}
-          {% endif %}
-          {% if site.last_name %}
-            {{- site.last_name -}}
-          {% endif %}
-        {% else %}
-          {{- site.title -}}
-        {% endif %}
+      <a class="navbar-brand" href="{{ site.baseurl }}/" aria-label="{{ site.title }}">
+        <img src="{{ '/assets/img/logo.png' | relative_url }}"
+             alt="{{ site.title }}"
+             class="lab-logo"
+             style="height: 36px; width: auto; display: block;">
       </a>
+      <style>
+        /* Invert the navy logo for legibility in dark mode */
+        html[data-theme='dark'] .lab-logo { filter: invert(1) hue-rotate(180deg) brightness(1.1); }
+      </style>
       <!-- Navbar Toggle -->
       <button
         class="navbar-toggler collapsed ml-auto"
