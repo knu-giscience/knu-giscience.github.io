@@ -273,13 +273,31 @@ content:
   # Publications (BibTeX, shared)
   # ========================
 
-  - name: publications
-    label: Publications (BibTeX, shared by both languages)
-    description: One BibTeX file used by both /publications/ and /ko/publications/.
+  - name: pub_journal
+    label: "Publications · I. Journal Articles"
+    description: BibTeX for refereed journal articles. Edit raw BibTeX.
     type: file
-    path: _bibliography/papers.bib
+    path: _bibliography/01_journal.bib
     fields:
-      - name: body
-        label: BibTeX
-        type: code
-        options: { language: bibtex }
+      - { name: body, label: BibTeX, type: code, options: { language: bibtex } }
+
+  - name: pub_book
+    label: "Publications · II. Book Chapters"
+    type: file
+    path: _bibliography/02_book_chapter.bib
+    fields:
+      - { name: body, label: BibTeX, type: code, options: { language: bibtex } }
+
+  - name: pub_conf
+    label: "Publications · III. Conference Proceedings"
+    type: file
+    path: _bibliography/03_conference.bib
+    fields:
+      - { name: body, label: BibTeX, type: code, options: { language: bibtex } }
+
+  - name: pub_report
+    label: "Publications · IV. Research Reports"
+    type: file
+    path: _bibliography/04_report.bib
+    fields:
+      - { name: body, label: BibTeX, type: code, options: { language: bibtex } }

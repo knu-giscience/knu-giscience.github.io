@@ -12,23 +12,23 @@ lang: ko
 ## I. Refereed Journals Articles
 
 <div class="publications">
-{% bibliography --query "@article" %}
+{% bibliography -f 01_journal %}
 </div>
 
 ## II. Peer-reviewed Book Chapters
 
 <div class="publications">
-{% bibliography --query "@incollection" %}
+{% bibliography -f 02_book_chapter %}
 </div>
 
 ## III. Selected Peer-reviewed Conference Proceedings
 
 <div class="publications">
-{% bibliography --query "@inproceedings" %}
+{% bibliography -f 03_conference %}
 </div>
 
 ## IV. Research Reports to Sponsors
 
 <div class="publications">
-{% bibliography --query "@techreport" %}
+{% bibliography -f 04_report %}
 </div>
