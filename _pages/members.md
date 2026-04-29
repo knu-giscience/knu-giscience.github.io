@@ -43,10 +43,11 @@ nav_order: 1
     <div class="member-grid">
       {% for m in members %}
       <div class="member-card">
+        {% assign pos = m.image_position | default: "center center" %}
         {% if m.image %}
-          <img src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" onerror="this.src='{{ '/assets/img/prof_pic.jpg' | relative_url }}'">
+          <img src="{{ '/assets/img/' | append: m.image | relative_url }}" alt="{{ m.name }}" style="object-position: {{ pos }};" onerror="this.src='{{ '/assets/img/prof_pic.jpg' | relative_url }}'">
         {% else %}
-          <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="{{ m.name }}">
+          <img src="{{ '/assets/img/prof_pic.jpg' | relative_url }}" alt="{{ m.name }}" style="object-position: {{ pos }};">
         {% endif %}
         <div class="name">{{ m.name }}</div>
         <div class="role">
