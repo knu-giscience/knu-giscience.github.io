@@ -1,0 +1,222 @@
+# Pages CMS configuration
+# Edit content via https://app.pagescms.org/
+# Sign in with GitHub, choose `knu-giscience/knu-giscience.github.io`,
+# and the editor will use this file to render forms.
+
+media:
+  - name: images
+    label: Images
+    input: assets/img
+    output: /assets/img/
+
+settings:
+  merge: false  # commit directly to main (vs. open PRs)
+
+content:
+
+  # ===== NEWS =====
+  - name: news
+    label: News
+    description: Lab activities, conferences, awards, and publications.
+    type: collection
+    path: _news
+    filename: "{year}-{month}-{day}-{fields.title|slugify}.md"
+    view:
+      fields: [date, title]
+      primary: title
+      sort: [-date]
+    fields:
+      - name: layout
+        label: Layout
+        type: string
+        default: post
+        hidden: true
+      - name: date
+        label: Date
+        type: date
+        required: true
+      - name: title
+        label: Short title (optional, for non-inline)
+        type: string
+      - name: inline
+        label: "Show as one-liner on /news/ (true) or full page (false)?"
+        type: boolean
+        default: true
+      - name: related_posts
+        label: Show related posts at the bottom
+        type: boolean
+        default: false
+        hidden: true
+      - name: body
+        label: News content (Markdown allowed)
+        type: rich-text
+
+  # ===== PROJECTS =====
+  - name: projects
+    label: Projects
+    description: Funded research projects.
+    type: collection
+    path: _projects
+    filename: "{year}-{fields.title|slugify}.md"
+    view:
+      fields: [title, period, sponsor, category]
+      primary: title
+      sort: [-importance]
+    fields:
+      - name: layout
+        label: Layout
+        type: string
+        default: page
+        hidden: true
+      - name: title
+        label: Project title (English)
+        type: string
+        required: true
+      - name: description
+        label: One-line description (Korean OK)
+        type: string
+      - name: img
+        label: Cover image (path under assets/img/)
+        type: image
+        options:
+          path: projects
+      - name: importance
+        label: "Display order (lower = first; ongoing 1-4, completed 5+)"
+        type: number
+        default: 99
+      - name: category
+        label: Category
+        type: select
+        options:
+          values: [ongoing, completed]
+        default: ongoing
+      - name: period
+        label: Period (e.g., 2025.04 – 2025.10)
+        type: string
+      - name: sponsor
+        label: Sponsor / funding agency
+        type: string
+      - name: body
+        label: Project description (Markdown)
+        type: rich-text
+
+  # ===== MEMBERS (single file) =====
+  - name: members
+    label: Members (all in one file)
+    description: Add or edit lab members. Photos go in assets/img/members/.
+    type: file
+    path: _data/members.yml
+    fields:
+      - name: pi
+        label: Principal Investigator
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name (e.g. "Jae Hyun Lee (이재현)"), type: string }
+          - { name: role, label: Role, type: string, default: "Associate Professor" }
+          - { name: image, label: Photo filename in assets/img/, type: image, options: { path: . } }
+          - { name: email, label: Email, type: string }
+          - { name: interests, label: Research interests (comma-separated), type: string }
+          - { name: orcid, label: ORCID, type: string }
+          - { name: scholar, label: Google Scholar ID, type: string }
+
+      - name: phd
+        label: PhD Students
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name (Korean and English), type: string }
+          - { name: role, label: Role, type: string, default: "PhD Student" }
+          - { name: since, label: Since (YYYY-S), type: string }
+          - { name: image, label: Photo, type: image, options: { path: members } }
+          - { name: email, label: Email, type: string }
+          - { name: interests, label: Interests, type: string }
+          - { name: note, label: Note, type: string }
+
+      - name: ms
+        label: MS Students
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Role, type: string, default: "MS Student" }
+          - { name: since, label: Since, type: string }
+          - { name: image, label: Photo, type: image, options: { path: members } }
+          - { name: email, label: Email, type: string }
+          - { name: interests, label: Interests, type: string }
+          - { name: note, label: Note, type: string }
+
+      - name: ug
+        label: Undergraduate Students
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Role, type: string }
+          - { name: since, label: Since, type: string }
+          - { name: image, label: Photo, type: image, options: { path: members } }
+          - { name: email, label: Email, type: string }
+          - { name: interests, label: Interests, type: string }
+          - { name: note, label: Note, type: string }
+
+      - name: alumni
+        label: Alumni
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Name, type: string }
+          - { name: role, label: Role (e.g. "MS (graduated)"), type: string }
+          - { name: image, label: Photo, type: image, options: { path: members } }
+          - { name: note, label: Current position, type: string }
+
+  # ===== PUBLICATIONS (BibTeX file) =====
+  - name: publications
+    label: Publications (BibTeX)
+    description: Edit citations directly. Use BibTeX format.
+    type: file
+    path: _bibliography/papers.bib
+    fields:
+      - name: body
+        label: Publications BibTeX
+        type: code
+        options: { language: bibtex }
+
+  # ===== ABOUT / CONTACT (single pages) =====
+  - name: about
+    label: Home page (About)
+    type: file
+    path: _pages/about.md
+    fields:
+      - name: layout
+        label: Layout
+        type: string
+        default: about
+        hidden: true
+      - name: title
+        label: Title
+        type: string
+        default: about
+      - name: subtitle
+        label: Subtitle
+        type: string
+      - name: body
+        label: Body content
+        type: rich-text
+
+  - name: contact
+    label: Contact page
+    type: file
+    path: _pages/contact.md
+    fields:
+      - name: layout
+        label: Layout
+        type: string
+        default: page
+        hidden: true
+      - name: title
+        label: Title
+        type: string
+        default: contact
+      - name: body
+        label: Body content
+        type: rich-text
