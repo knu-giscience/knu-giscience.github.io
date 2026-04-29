@@ -2,20 +2,17 @@
 layout: about
 title: about
 permalink: /
-subtitle: Department of Geography, Kyungpook National University
+subtitle: <strong>Geography that listens to data, places, and people.</strong>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false
   more_info: >
-    <p>GIScience &amp; Spatial Bigdata Lab</p>
-    <p>Department of Geography</p>
-    <p>College of Social Sciences</p>
+    <p><strong>Department of Geography</strong></p>
     <p>Kyungpook National University</p>
     <p>80 Daehak-ro, Buk-gu, Daegu 41566</p>
-    <p>Republic of Korea</p>
-    <p>Tel. +82-53-950-7173</p>
+    <p>📞 +82-53-950-7173</p>
 
 selected_papers: true
 social: true
@@ -27,36 +24,75 @@ announcements:
 
 latest_posts:
   enabled: false
-  scrollable: true
-  limit: 3
 ---
 
-## Geographical Information Science (GIScience)
+<style>
+  .pillar-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1.8rem 0 0.5rem;
+  }
+  @media (min-width: 720px) {
+    .pillar-grid { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+  }
+  .pillar {
+    padding: 1.1rem 1.2rem;
+    border: 1px solid var(--global-divider-color, #e7e7e7);
+    border-radius: 12px;
+    background: var(--global-card-bg-color, #fafafa);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .pillar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+  .pillar .icon { font-size: 1.6rem; margin-bottom: 0.4rem; line-height: 1; }
+  .pillar h3 {
+    font-size: 1rem; font-weight: 700; margin: 0.2rem 0 0.4rem;
+    letter-spacing: 0.01em;
+  }
+  .pillar p { font-size: 0.9rem; line-height: 1.45; margin: 0; color: #555; }
+  .quick-links {
+    margin-top: 1.4rem;
+    font-size: 0.95rem;
+  }
+  .quick-links a {
+    display: inline-block;
+    margin-right: 1.1rem;
+    padding-bottom: 1px;
+    border-bottom: 1px solid transparent;
+  }
+  .quick-links a:hover { border-bottom-color: currentColor; }
+</style>
 
-Geography has gained increasing importance as a foundational discipline in
-the era of globalization and localization. Within this context, GIScience
-— which represents real-world environments and phenomena geographically,
-organizes and analyzes them, and derives information from them — is taking
-on greater significance. We explore methods of geographic representation
-suited to the digital-twin era and continue to research analytical methods
-that can address real-world problems.
+We are a research lab at the **Department of Geography, Kyungpook National
+University**, working at the intersection of GIScience, spatial big data,
+and mobility — to understand how cities, regions, and people move and
+change.
 
-## Geospatial Big Data
+<div class="pillar-grid">
+  <div class="pillar">
+    <div class="icon">🗺️</div>
+    <h3>GIScience</h3>
+    <p>Representing and analyzing the real world for the digital-twin era.</p>
+  </div>
+  <div class="pillar">
+    <div class="icon">📊</div>
+    <h3>Spatial Big Data</h3>
+    <p>Discovering hidden patterns from mobile, social-media, and sensor data.</p>
+  </div>
+  <div class="pillar">
+    <div class="icon">🚗</div>
+    <h3>Mobility &amp; Future Vehicles</h3>
+    <p>Tracking how EVs, AVs, and shared mobility reshape urban space.</p>
+  </div>
+</div>
 
-Geospatial big data refers to data objects or elements containing
-geographic information that are large in size, varied in form, and rapidly
-generated and circulated. Recently, geospatial big data collected from
-diverse sources — mobile devices, social-media data, drones, and others —
-have begun to play new roles in urban and regional research. We analyze
-such data to discover spatial patterns that were previously undetected and
-to propose new approaches to regional problem-solving on that basis.
-
-## Mobility Analysis and Future Mobility
-
-Mobility analysis provides a foundation for understanding individual
-movement in everyday life and for offering better transport environments.
-Future mobility — represented by electric vehicles, autonomous vehicles,
-and shared vehicles — is expected to bring transformative changes to
-everyday personal mobility. We investigate how these changes manifest, for
-whom, and in what ways, and we conduct research that anticipates how urban
-space will be reshaped by them.
+<div class="quick-links">
+  → <a href="{{ '/members/' | relative_url }}">Members</a>
+  <a href="{{ '/publications/' | relative_url }}">Publications</a>
+  <a href="{{ '/projects/' | relative_url }}">Projects</a>
+  <a href="{{ '/news/' | relative_url }}">News</a>
+  <a href="{{ '/contact/' | relative_url }}">Contact</a>
+</div>
