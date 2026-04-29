@@ -1,7 +1,7 @@
 # Pages CMS configuration
 # Edit content via https://app.pagescms.org/
 # Sign in with GitHub, choose `knu-giscience/knu-giscience.github.io`,
-# and the editor will use this file to render forms.
+# and the editor uses this file to render forms.
 
 media:
   - name: images
@@ -10,14 +10,135 @@ media:
     output: /assets/img/
 
 settings:
-  merge: false  # commit directly to main (vs. open PRs)
+  merge: false  # commit directly to main
 
 content:
 
-  # ===== NEWS =====
-  - name: news
-    label: News
-    description: Lab activities, conferences, awards, and publications.
+  # ========================
+  # 한국어 (Korean) content
+  # ========================
+
+  - name: ko_about
+    label: "[KO] 소개 (홈)"
+    type: file
+    path: _pages/ko-about.md
+    fields:
+      - { name: title, label: 제목, type: string, default: "소개" }
+      - { name: permalink, label: URL, type: string, default: "/ko/", hidden: true }
+      - { name: nav, label: nav, type: boolean, default: false, hidden: true }
+      - { name: description, label: 부제, type: string }
+      - { name: lang, label: lang, type: string, default: "ko", hidden: true }
+      - { name: body, label: 본문, type: rich-text }
+
+  - name: ko_members
+    label: "[KO] 멤버"
+    description: 한국어 멤버 정보 (이름·연구분야·입학시기 모두 한국어로).
+    type: file
+    path: _data/members_ko.yml
+    fields:
+      - name: pi
+        label: 교수
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "이름 (한글(영문))", type: string }
+          - { name: role, label: 직책, type: string, default: "부교수" }
+          - { name: image, label: 사진, type: image, options: { path: . } }
+          - { name: education, label: 학력, type: text }
+          - { name: position, label: 현직, type: string }
+          - { name: email, label: 이메일, type: string }
+          - { name: orcid, label: ORCID, type: string }
+
+      - name: phd
+        label: 박사과정
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "이름 (한글(영문))", type: string }
+          - { name: role, label: 직책, type: string, default: "박사과정" }
+          - { name: since, label: "입학 (예: 2025-1)", type: string }
+          - { name: image, label: 사진, type: image, options: { path: members } }
+          - { name: affiliation, label: 소속, type: string }
+          - { name: interests, label: 연구분야, type: string }
+          - { name: note, label: 비고, type: string }
+          - { name: email, label: 이메일, type: string }
+
+      - name: ms
+        label: 석사과정
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "이름 (한글(영문))", type: string }
+          - { name: role, label: 직책, type: string, default: "석사과정" }
+          - { name: since, label: 입학, type: string }
+          - { name: image, label: 사진, type: image, options: { path: members } }
+          - { name: interests, label: 연구분야, type: string }
+          - { name: note, label: 비고, type: string }
+          - { name: email, label: 이메일, type: string }
+
+      - name: ug
+        label: 학부생
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "이름 (한글(영문))", type: string }
+          - { name: role, label: 직책, type: string }
+          - { name: since, label: 입학, type: string }
+          - { name: image, label: 사진, type: image, options: { path: members } }
+          - { name: interests, label: 연구분야, type: string }
+          - { name: email, label: 이메일, type: string }
+
+      - name: alumni
+        label: 동문
+        type: object
+        list: true
+        fields:
+          - { name: name, label: "이름 (한글(영문))", type: string }
+          - { name: role, label: "구분 (예: 석사과정 2022-1 졸업)", type: string }
+          - { name: image, label: 사진, type: image, options: { path: members } }
+          - { name: note, label: 현재 소속, type: string }
+
+  - name: ko_news
+    label: "[KO] 뉴스"
+    description: 한국어 뉴스 페이지. 새 뉴스는 페이지 맨 위에 추가 (역연대순).
+    type: file
+    path: _pages/ko-news.md
+    fields:
+      - { name: title, label: 제목, type: string, default: "뉴스", hidden: true }
+      - { name: permalink, label: URL, type: string, default: "/ko/news/", hidden: true }
+      - { name: nav, label: nav, type: boolean, default: false, hidden: true }
+      - { name: lang, label: lang, type: string, default: "ko", hidden: true }
+      - { name: body, label: "뉴스 본문 (HTML/Markdown)", type: rich-text }
+
+  - name: ko_projects
+    label: "[KO] 프로젝트"
+    description: 한국어 프로젝트 페이지. 진행 중 → 완료 순으로 정리.
+    type: file
+    path: _pages/ko-projects.md
+    fields:
+      - { name: title, label: 제목, type: string, default: "프로젝트", hidden: true }
+      - { name: permalink, label: URL, type: string, default: "/ko/projects/", hidden: true }
+      - { name: nav, label: nav, type: boolean, default: false, hidden: true }
+      - { name: lang, label: lang, type: string, default: "ko", hidden: true }
+      - { name: body, label: 본문, type: rich-text }
+
+  - name: ko_contact
+    label: "[KO] 연락처"
+    type: file
+    path: _pages/ko-contact.md
+    fields:
+      - { name: title, label: 제목, type: string, default: "연락처" }
+      - { name: permalink, label: URL, type: string, default: "/ko/contact/", hidden: true }
+      - { name: nav, label: nav, type: boolean, default: false, hidden: true }
+      - { name: body, label: 본문, type: rich-text }
+
+  # ========================
+  # English content
+  # ========================
+
+  - name: en_news
+    label: "[EN] News (collection)"
+    description: English news. Each item is a separate file.
     type: collection
     path: _news
     filename: "{year}-{month}-{day}-{fields.title|slugify}.md"
@@ -27,34 +148,20 @@ content:
       sort: [-date]
     fields:
       - name: layout
-        label: Layout
         type: string
         default: post
         hidden: true
-      - name: date
-        label: Date
-        type: date
-        required: true
-      - name: title
-        label: Short title (optional, for non-inline)
-        type: string
-      - name: inline
-        label: "Show as one-liner on /news/ (true) or full page (false)?"
-        type: boolean
-        default: true
+      - { name: date, label: Date, type: date, required: true }
+      - { name: title, label: Short title (optional), type: string }
+      - { name: inline, label: Show as one-liner?, type: boolean, default: true }
       - name: related_posts
-        label: Show related posts at the bottom
         type: boolean
         default: false
         hidden: true
-      - name: body
-        label: News content (Markdown allowed)
-        type: rich-text
+      - { name: body, label: News content (English), type: rich-text }
 
-  # ===== PROJECTS =====
-  - name: projects
-    label: Projects
-    description: Funded research projects.
+  - name: en_projects
+    label: "[EN] Projects (collection)"
     type: collection
     path: _projects
     filename: "{year}-{fields.title|slugify}.md"
@@ -64,46 +171,21 @@ content:
       sort: [-importance]
     fields:
       - name: layout
-        label: Layout
         type: string
         default: page
         hidden: true
-      - name: title
-        label: Project title (English)
-        type: string
-        required: true
-      - name: description
-        label: One-line description (Korean OK)
-        type: string
-      - name: img
-        label: Cover image (path under assets/img/)
-        type: image
-        options:
-          path: projects
-      - name: importance
-        label: "Display order (lower = first; ongoing 1-4, completed 5+)"
-        type: number
-        default: 99
-      - name: category
-        label: Category
-        type: select
-        options:
-          values: [ongoing, completed]
-        default: ongoing
-      - name: period
-        label: Period (e.g., 2025.04 – 2025.10)
-        type: string
-      - name: sponsor
-        label: Sponsor / funding agency
-        type: string
-      - name: body
-        label: Project description (Markdown)
-        type: rich-text
+      - { name: title, label: Project title (English), type: string, required: true }
+      - { name: description, label: Short description, type: string }
+      - { name: img, label: Cover image, type: image, options: { path: projects } }
+      - { name: importance, label: Display order (lower = first), type: number, default: 99 }
+      - { name: category, label: Category, type: select, options: { values: [ongoing, completed] }, default: ongoing }
+      - { name: period, label: "Period (e.g. 2026.04 – 2026.10)", type: string }
+      - { name: sponsor, label: Sponsor, type: string }
+      - { name: body, label: Description, type: rich-text }
 
-  # ===== MEMBERS (single file) =====
-  - name: members
-    label: Members (all in one file)
-    description: Add or edit lab members. Photos go in assets/img/members/.
+  - name: en_members
+    label: "[EN] Members"
+    description: English member roster. The Korean version is at _data/members_ko.yml.
     type: file
     path: _data/members.yml
     fields:
@@ -112,11 +194,13 @@ content:
         type: object
         list: true
         fields:
-          - { name: name, label: Name (e.g. "Jae Hyun Lee (이재현)"), type: string }
+          - { name: name, label: Name, type: string }
           - { name: role, label: Role, type: string, default: "Associate Professor" }
-          - { name: image, label: Photo filename in assets/img/, type: image, options: { path: . } }
+          - { name: image, label: Photo, type: image, options: { path: . } }
           - { name: email, label: Email, type: string }
-          - { name: interests, label: Research interests (comma-separated), type: string }
+          - { name: interests, label: Research interests, type: string }
+          - { name: education, label: Education, type: text }
+          - { name: position, label: Position, type: string }
           - { name: orcid, label: ORCID, type: string }
           - { name: scholar, label: Google Scholar ID, type: string }
 
@@ -125,9 +209,9 @@ content:
         type: object
         list: true
         fields:
-          - { name: name, label: Name (Korean and English), type: string }
+          - { name: name, label: Name, type: string }
           - { name: role, label: Role, type: string, default: "PhD Student" }
-          - { name: since, label: Since (YYYY-S), type: string }
+          - { name: since, label: Since, type: string }
           - { name: image, label: Photo, type: image, options: { path: members } }
           - { name: email, label: Email, type: string }
           - { name: interests, label: Interests, type: string }
@@ -157,7 +241,6 @@ content:
           - { name: image, label: Photo, type: image, options: { path: members } }
           - { name: email, label: Email, type: string }
           - { name: interests, label: Interests, type: string }
-          - { name: note, label: Note, type: string }
 
       - name: alumni
         label: Alumni
@@ -165,58 +248,38 @@ content:
         list: true
         fields:
           - { name: name, label: Name, type: string }
-          - { name: role, label: Role (e.g. "MS (graduated)"), type: string }
+          - { name: role, label: Role, type: string }
           - { name: image, label: Photo, type: image, options: { path: members } }
           - { name: note, label: Current position, type: string }
 
-  # ===== PUBLICATIONS (BibTeX file) =====
+  - name: en_about
+    label: "[EN] Home (About)"
+    type: file
+    path: _pages/about.md
+    fields:
+      - { name: title, type: string, default: about, hidden: true }
+      - { name: subtitle, label: Subtitle, type: string }
+      - { name: body, label: Body, type: rich-text }
+
+  - name: en_contact
+    label: "[EN] Contact"
+    type: file
+    path: _pages/contact.md
+    fields:
+      - { name: title, type: string, default: contact, hidden: true }
+      - { name: body, label: Body, type: rich-text }
+
+  # ========================
+  # Publications (BibTeX, shared)
+  # ========================
+
   - name: publications
-    label: Publications (BibTeX)
-    description: Edit citations directly. Use BibTeX format.
+    label: Publications (BibTeX, shared by both languages)
+    description: One BibTeX file used by both /publications/ and /ko/publications/.
     type: file
     path: _bibliography/papers.bib
     fields:
       - name: body
-        label: Publications BibTeX
+        label: BibTeX
         type: code
         options: { language: bibtex }
-
-  # ===== ABOUT / CONTACT (single pages) =====
-  - name: about
-    label: Home page (About)
-    type: file
-    path: _pages/about.md
-    fields:
-      - name: layout
-        label: Layout
-        type: string
-        default: about
-        hidden: true
-      - name: title
-        label: Title
-        type: string
-        default: about
-      - name: subtitle
-        label: Subtitle
-        type: string
-      - name: body
-        label: Body content
-        type: rich-text
-
-  - name: contact
-    label: Contact page
-    type: file
-    path: _pages/contact.md
-    fields:
-      - name: layout
-        label: Layout
-        type: string
-        default: page
-        hidden: true
-      - name: title
-        label: Title
-        type: string
-        default: contact
-      - name: body
-        label: Body content
-        type: rich-text

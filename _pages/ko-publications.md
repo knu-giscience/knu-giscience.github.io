@@ -1,15 +1,15 @@
 ---
 layout: page
-permalink: /publications/
-title: publications
-description: Publications by category, in reverse chronological order.
-nav: true
-nav_order: 2
+title: 출판물
+permalink: /ko/publications/
+nav: false
+description: 분류별 출판물 목록 (역연대순)
+lang: ko
 ---
 
 {% include bib_search.liquid %}
 
-## I. Refereed Journal Articles
+## I. Refereed Journals Articles
 
 <div class="publications">
 {% bibliography --query "@article" %}

@@ -1,0 +1,81 @@
+# GIScience & Spatial Bigdata Lab — 멤버 정보 (한국어 페이지용)
+# Weebly 원본 그대로 보존.
+
+pi:
+  - name: 이재현(Lee, Jaehyun)
+    role: 부교수
+    image: prof_pic.jpg
+    education: |
+      경희대학교 지리학과 이학사
+      경희대학교 지리학과 이학석사
+      UC Santa Barbara Department of Geography 지리학박사
+    position: 2025.04 ~ 현재 경북대학교 지리학과 부교수
+    interests:
+    email:
+    orcid: 0000-0003-4007-7048
+
+phd:
+  - name: 이지현(Jihyun Lee)
+    role: 박사과정
+    since: 2017-1
+    image: members/jihyun_lee.jpg
+    affiliation: 일반대학원 지리학과 박사과정
+    interests: 행태지리
+    note: 한국국토정보공사 재직
+    email:
+
+  - name: 최수정(Soojeong Choi)
+    role: 박사과정
+    since: 2025-1
+    image: members/soojeong_choi.jpg
+    affiliation: 일반대학원 지리학과 박사과정
+    interests: 활동-통행 행태, 시공간 지리학, 행태 모델링
+    email:
+
+ms:
+  - name: 조민영(Minyeong Cho)
+    role: 석사과정
+    since: 2022-1
+    image: members/minyeong_cho.jpg
+    interests: 행태지리, 재난·재해, GIS
+    email:
+
+  - name: 김명환(Myeonghwan Kim)
+    role: 석사과정
+    since: 2025-1
+    image: members/myeonghwan_kim.jpg
+    interests: GIS, 교통지리, 교통형평성
+    email:
+
+  - name: 최민정(Minjeong Choi)
+    role: 석사과정
+    since: 2026-1
+    image: members/minjeong_choi.jpg
+    interests: GIS, 교통지리
+    email:
+
+  - name: 정연우(Yeonwoo Jung)
+    role: 석사과정
+    since: 2026-1
+    image: members/yeonwoo_jung.jpg
+    interests: GIS
+    email:
+
+ug:
+  - name: 황찬범(Chanbum Hwang)
+    role: 학부생 (학·석사연계과정)
+    since: 2025-2
+    image: members/chanbum_hwang.jpg
+    interests: GIS, 교통지리, 도시지리
+    email:
+
+alumni:
+  - name: 심지윤(Jiyun Shim)
+    role: 석사과정 2022-1 졸업
+    image: members/jiyun_shim.jpg
+    note: 한국교통연구원 재직
+
+  - name: 정다빈(Dabin Jeong)
+    role: 석사과정 2023-2 졸업
+    image: members/dabin_jeong.jpg
+    note: 한국교통연구원 재직

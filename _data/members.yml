@@ -1,85 +1,80 @@
-# GIScience & Spatial Bigdata Lab — Members
-#
-# Categories displayed (in order):
-#   pi       Principal Investigator
-#   phd      PhD students
-#   ms       MS students
-#   ug       Undergraduate students (including BS+MS combined program)
-#   alumni   Alumni
-#
-# Each member needs at minimum: name, role, image (optional), email (optional),
-# interests (optional), since (optional, "YYYY-S" format e.g. 2025-1).
+# GIScience & Spatial Bigdata Lab — Members (English page data)
+# Korean page reads from _data/members_ko.yml
 
 pi:
-  - name: Jae Hyun Lee (이재현)
+  - name: Jae Hyun Lee
     role: Associate Professor
     image: prof_pic.jpg
-    email: # add when ready
+    email:
     interests: Transportation Geography, Spatial Big Data, GIScience
+    education: |
+      BS, Geography, Kyung Hee University.
+      MS, Geography, Kyung Hee University.
+      PhD, Geography, UC Santa Barbara.
+    position: Associate Professor, Department of Geography, Kyungpook National University (since 2025.04)
     orcid: 0000-0003-4007-7048
-    scholar: # Google Scholar ID
-    cv: # /assets/pdf/cv.pdf
+    scholar:
 
 phd:
-  - name: Jihyun Lee (이지현)
+  - name: Jihyun Lee
     role: PhD Student
     since: 2017-1
     image: members/jihyun_lee.jpg
-    email: # add when ready
+    email:
     interests: Behavioral Geography
-    note: At Korea Land and Geospatial InformatiX Corporation (LX)
+    note: Currently at Korea Land and Geospatial InformatiX Corporation (LX)
 
-  - name: Soojeong Choi (최수정)
+  - name: Soojeong Choi
     role: PhD Student
     since: 2025-1
     image: members/soojeong_choi.jpg
-    email: # add when ready
+    email:
     interests: Activity-Travel Behavior, Time Geography, Behavioral Modeling
 
 ms:
-  - name: Minyoung Cho (조민영)
+  - name: Minyeong Cho
     role: MS Student
     since: 2022-1
-    image: members/minyoung_cho.jpg
-    email: # add when ready
+    image: members/minyeong_cho.jpg
+    email:
     interests: Behavioral Geography, Disasters, GIS
 
-  - name: Myunghwan Kim (김명환)
+  - name: Myeonghwan Kim
     role: MS Student
     since: 2025-1
-    image: members/myunghwan_kim.jpg
-    email: # add when ready
+    image: members/myeonghwan_kim.jpg
+    email:
     interests: GIS, Transportation Geography, Transport Equity
 
-  - name: Minjeong Choi (최민정)
+  - name: Minjeong Choi
     role: MS Student
     since: 2026-1
     image: members/minjeong_choi.jpg
-    email: # add when ready
+    email:
     interests: GIS, Transportation Geography
 
-  - name: Yeonwoo Jeong (정연우)
+  - name: Yeonwoo Jung
     role: MS Student
     since: 2026-1
-    image: members/yeonwoo_jeong.jpg
-    email: # add when ready
-    interests: GIS, Transportation Geography
+    image: members/yeonwoo_jung.jpg
+    email:
+    interests: GIS
 
 ug:
-  - name: Chanbeom Hwang (황찬범)
+  - name: Chanbum Hwang
     role: BS+MS Combined Program
     since: 2025-2
-    image: members/chanbeom_hwang.jpg
-    email: # add when ready
+    image: members/chanbum_hwang.jpg
+    email:
     interests: GIS, Transportation Geography, Urban Geography
 
 alumni:
-  - name: Jiyoon Shim (심지윤)
-    role: MS (graduated)
-    image: members/jiyoon_shim.jpg
-    note: Now at the Korea Transport Institute (KOTI)
+  - name: Jiyun Shim
+    role: MS (graduated 2022-1)
+    image: members/jiyun_shim.jpg
+    note: Currently at the Korea Transport Institute (KOTI)
 
-  - name: Dabin Jeong (정다빈)
-    role: MS (graduated)
+  - name: Dabin Jeong
+    role: MS (graduated 2023-2)
     image: members/dabin_jeong.jpg
-    note: Now at the Korea Transport Institute (KOTI)
+    note: Currently at the Korea Transport Institute (KOTI)
