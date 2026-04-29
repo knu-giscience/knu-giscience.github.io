@@ -111,6 +111,63 @@ latest_posts:
   @media (min-width: 760px) {
     .post-header .desc { font-size: 1.6rem; }
   }
+
+  /* ---------- Slideshow ---------- */
+  .lab-slideshow {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 1.8rem 0 2.4rem;
+    background: #1a1f3a;
+    box-shadow: 0 6px 22px rgba(44, 50, 96, 0.12);
+  }
+  .lab-slideshow .slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+    pointer-events: none;
+  }
+  .lab-slideshow .slide.active { opacity: 1; pointer-events: auto; }
+  .lab-slideshow .slide img {
+    width: 100%; height: 100%; object-fit: cover;
+    display: block;
+  }
+  .lab-slideshow .ss-nav {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    width: 38px; height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    color: #2c3260;
+    font-size: 1.4rem; font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0; transition: opacity .2s ease, background .2s ease;
+  }
+  .lab-slideshow:hover .ss-nav { opacity: 1; }
+  .lab-slideshow .ss-nav:hover { background: white; }
+  .lab-slideshow .ss-nav.prev { left: 12px; }
+  .lab-slideshow .ss-nav.next { right: 12px; }
+  .lab-slideshow .dots {
+    position: absolute;
+    bottom: 12px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px;
+    z-index: 2;
+  }
+  .lab-slideshow .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.45);
+    cursor: pointer;
+    transition: background .2s ease, transform .2s ease;
+  }
+  .lab-slideshow .dot:hover { transform: scale(1.3); }
+  .lab-slideshow .dot.active { background: white; }
 </style>
 
 <p class="home-intro">
@@ -137,6 +194,56 @@ latest_posts:
     <p>Tracking how EVs, AVs, and shared mobility reshape urban space.</p>
   </div>
 </div>
+
+<div class="lab-slideshow" aria-label="Lab life">
+  {% assign slides = site.static_files | where: "path", "/assets/img/slideshow/" %}
+  {% assign all_slides = "" | split: "" %}
+  {% for f in site.static_files %}
+    {% if f.path contains '/assets/img/slideshow/' and f.extname != '' %}
+      {% assign all_slides = all_slides | push: f %}
+    {% endif %}
+  {% endfor %}
+  {% for f in all_slides %}
+    <div class="slide{% if forloop.first %} active{% endif %}">
+      <img src="{{ f.path | relative_url }}"
+           alt="Lab activity {{ forloop.index }}"
+           loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+    </div>
+  {% endfor %}
+  <button class="ss-nav prev" aria-label="Previous slide">‹</button>
+  <button class="ss-nav next" aria-label="Next slide">›</button>
+  <div class="dots">
+    {% for f in all_slides %}
+      <span class="dot{% if forloop.first %} active{% endif %}" data-i="{{ forloop.index0 }}"></span>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+(function() {
+  var box = document.querySelector('.lab-slideshow');
+  if (!box) return;
+  var slides = box.querySelectorAll('.slide');
+  var dots = box.querySelectorAll('.dot');
+  var idx = 0;
+  var timer;
+  function show(i) {
+    idx = (i + slides.length) % slides.length;
+    slides.forEach(function(s, k) { s.classList.toggle('active', k === idx); });
+    dots.forEach(function(d, k) { d.classList.toggle('active', k === idx); });
+  }
+  function start() { timer = setInterval(function() { show(idx + 1); }, 5000); }
+  function stop()  { clearInterval(timer); }
+  box.querySelector('.next').addEventListener('click', function() { stop(); show(idx + 1); start(); });
+  box.querySelector('.prev').addEventListener('click', function() { stop(); show(idx - 1); start(); });
+  dots.forEach(function(d) {
+    d.addEventListener('click', function() { stop(); show(parseInt(d.dataset.i, 10)); start(); });
+  });
+  box.addEventListener('mouseenter', stop);
+  box.addEventListener('mouseleave', start);
+  start();
+})();
+</script>
 
 <div class="home-cta">
   <a href="{{ '/members/' | relative_url }}"><span class="arrow">→</span>Meet the team</a>
