@@ -9,11 +9,6 @@ display_categories: [ongoing, completed]
 horizontal: false
 ---
 
-> The full list of ongoing and completed projects (with sponsors and
-> detailed scope) is currently maintained on the
-> [한국어 page](/ko/projects/). English summaries appear here as they are
-> added.
-
 <div class="projects">
 {% if site.enable_project_categories and page.display_categories %}
   {% for category in page.display_categories %}
