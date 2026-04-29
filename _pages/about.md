@@ -8,9 +8,7 @@ selected_papers: true
 social: true
 
 announcements:
-  enabled: true
-  scrollable: true
-  limit: 5
+  enabled: false
 
 latest_posts:
   enabled: false
@@ -119,7 +117,7 @@ latest_posts:
     aspect-ratio: 16 / 9;
     overflow: hidden;
     border-radius: 10px;
-    margin: 1.8rem 0 2.4rem;
+    margin: 0.8rem 0 2.4rem;  /* sits right under the hero */
     background: #1a1f3a;
     box-shadow: 0 6px 22px rgba(44, 50, 96, 0.12);
   }
@@ -170,6 +168,29 @@ latest_posts:
   .lab-slideshow .dot.active { background: white; }
 </style>
 
+<div class="lab-slideshow" aria-label="Lab life">
+  {% assign all_slides = "" | split: "" %}
+  {% for f in site.static_files %}
+    {% if f.path contains '/assets/img/slideshow/' and f.extname != '' %}
+      {% assign all_slides = all_slides | push: f %}
+    {% endif %}
+  {% endfor %}
+  {% for f in all_slides %}
+    <div class="slide{% if forloop.first %} active{% endif %}">
+      <img src="{{ f.path | relative_url }}"
+           alt="Lab activity {{ forloop.index }}"
+           loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+    </div>
+  {% endfor %}
+  <button class="ss-nav prev" aria-label="Previous slide">‹</button>
+  <button class="ss-nav next" aria-label="Next slide">›</button>
+  <div class="dots">
+    {% for f in all_slides %}
+      <span class="dot{% if forloop.first %} active{% endif %}" data-i="{{ forloop.index0 }}"></span>
+    {% endfor %}
+  </div>
+</div>
+
 <p class="home-intro">
   We are a research lab at the <strong>Department of Geography, Kyungpook
   National University</strong>, working at the intersection of GIScience,
@@ -192,30 +213,6 @@ latest_posts:
     <div class="pillar-num">03 — RESEARCH</div>
     <h3>Mobility &amp; Future Vehicles</h3>
     <p>Tracking how EVs, AVs, and shared mobility reshape urban space.</p>
-  </div>
-</div>
-
-<div class="lab-slideshow" aria-label="Lab life">
-  {% assign slides = site.static_files | where: "path", "/assets/img/slideshow/" %}
-  {% assign all_slides = "" | split: "" %}
-  {% for f in site.static_files %}
-    {% if f.path contains '/assets/img/slideshow/' and f.extname != '' %}
-      {% assign all_slides = all_slides | push: f %}
-    {% endif %}
-  {% endfor %}
-  {% for f in all_slides %}
-    <div class="slide{% if forloop.first %} active{% endif %}">
-      <img src="{{ f.path | relative_url }}"
-           alt="Lab activity {{ forloop.index }}"
-           loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
-    </div>
-  {% endfor %}
-  <button class="ss-nav prev" aria-label="Previous slide">‹</button>
-  <button class="ss-nav next" aria-label="Next slide">›</button>
-  <div class="dots">
-    {% for f in all_slides %}
-      <span class="dot{% if forloop.first %} active{% endif %}" data-i="{{ forloop.index0 }}"></span>
-    {% endfor %}
   </div>
 </div>
 
