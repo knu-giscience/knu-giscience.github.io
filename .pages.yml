@@ -14,25 +14,6 @@ settings:
 
 content:
 
-  # ===== NEWS =====
-  - name: news
-    label: News
-    description: Lab activities, conferences, awards, publications.
-    type: collection
-    path: _news
-    filename: "{year}-{month}-{day}-{fields.title|slugify}.md"
-    view:
-      fields: [date, title]
-      primary: title
-      sort: [-date]
-    fields:
-      - { name: layout, type: string, default: post, hidden: true }
-      - { name: date, label: Date, type: date, required: true }
-      - { name: title, label: Short title (optional), type: string }
-      - { name: inline, label: Show as one-liner?, type: boolean, default: true }
-      - { name: related_posts, type: boolean, default: false, hidden: true }
-      - { name: body, label: News content, type: rich-text }
-
   # ===== PROJECTS =====
   - name: projects
     label: Projects

@@ -7,9 +7,6 @@ subtitle: <em>Geography that listens to data, places, and people.</em>
 selected_papers: true
 social: true
 
-announcements:
-  enabled: false
-
 latest_posts:
   enabled: false
 ---
@@ -49,13 +46,13 @@ latest_posts:
     .pillar:first-child { padding-left: 0; }
     .pillar:not(:first-child) { padding-left: 1.6rem; }
   }
-  .pillar:hover { background-color: rgba(0,0,0,0.015); }
+  .pillar:hover { background-color: rgba(127,127,127,0.06); }
 
   .pillar-num {
     font-family: "Roboto Slab", Georgia, serif;
     font-size: 0.85rem;
     letter-spacing: 0.18em;
-    color: #2c3260;
+    color: var(--global-theme-color);
     margin-bottom: 0.5rem;
     font-weight: 700;
   }
@@ -65,11 +62,12 @@ latest_posts:
     margin: 0 0 0.5rem 0;
     line-height: 1.25;
     letter-spacing: -0.01em;
+    color: var(--global-text-color);
   }
   .pillar p {
     font-size: 0.92rem;
     line-height: 1.55;
-    color: #555;
+    color: var(--global-text-color-light, #666);
     margin: 0;
   }
 
@@ -89,7 +87,7 @@ latest_posts:
     transition: border-bottom-color .15s ease;
   }
   .home-cta a:hover { border-bottom-color: currentColor; }
-  .home-cta .arrow { color: #2c3260; margin-right: 0.3rem; font-weight: 700; }
+  .home-cta .arrow { color: var(--global-theme-color); margin-right: 0.3rem; font-weight: 700; }
 
   /* Tweaks for the auto-rendered news / selected publications headings */
   article > h2 {
@@ -103,7 +101,7 @@ latest_posts:
   .post-header .desc {
     font-size: 1.35rem;
     line-height: 1.4;
-    color: #444;
+    color: var(--global-text-color);
     margin-top: 0.4rem;
   }
   @media (min-width: 760px) {

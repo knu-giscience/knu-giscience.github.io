@@ -13,8 +13,8 @@ nav_order: 3
     font-size: 1.55rem;
     margin-bottom: 1.2rem;
     padding-bottom: 0.4rem;
-    border-bottom: 2px solid #2c3260;
-    color: #2c3260;
+    border-bottom: 2px solid var(--global-theme-color);
+    color: var(--global-theme-color);
     letter-spacing: -0.01em;
   }
   .proj {
@@ -29,7 +29,7 @@ nav_order: 3
   }
   .proj .meta {
     font-size: 0.85rem;
-    color: #6b7280;
+    color: var(--global-text-color-light, #666);
     line-height: 1.55;
   }
   .proj .meta .label {
@@ -37,7 +37,7 @@ nav_order: 3
     font-size: 0.7rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #2c3260;
+    color: var(--global-theme-color);
     font-weight: 700;
     margin-top: 0.55rem;
   }
@@ -47,9 +47,14 @@ nav_order: 3
     line-height: 1.35;
     margin: 0 0 0.5rem 0;
     font-weight: 700;
-    color: var(--global-text-color, #222);
+    color: var(--global-text-color);
   }
-  .proj p { font-size: 0.92rem; line-height: 1.55; color: #444; margin: 0; }
+  .proj p {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--global-text-color);
+    margin: 0;
+  }
 </style>
 
 {% assign categories = "ongoing,completed" | split: "," %}

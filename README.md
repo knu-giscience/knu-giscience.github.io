@@ -19,7 +19,7 @@ You **don't need to clone this repo or use Git**. Use Pages CMS:
 1. Go to <https://app.pagescms.org/>
 2. Sign in with your GitHub account
 3. Pick `knu-giscience/knu-giscience.github.io`
-4. Edit News, Members, Projects, Publications via web forms
+4. Edit Members, Projects, Publications via web forms
 
 📘 Detailed Korean guide: [STUDENT_GUIDE.md](./STUDENT_GUIDE.md)
 
@@ -30,8 +30,7 @@ If you don't yet have edit access, send your GitHub username to Prof. Lee.
 ## Repository structure
 
 ```
-_pages/        Top-level pages (about, members, news, projects, publications, contact)
-_news/         News entries (one Markdown file per item)
+_pages/        Top-level pages (about, members, projects, publications, contact)
 _projects/     Research project pages
 _bibliography/papers.bib   Publications in BibTeX
 _data/members.yml          Lab member profiles
