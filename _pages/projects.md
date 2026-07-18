@@ -3,6 +3,8 @@ layout: page
 title: projects
 permalink: /projects/
 description: Funded research projects.
+lang: en
+page_key: projects
 nav: true
 nav_order: 3
 ---

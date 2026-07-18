@@ -162,8 +162,13 @@ collections:
     output: true
   projects:
     output: true
+  projects_kr:
+    output: true
+    permalink: /kr/projects/:path/
   teachings:
     output: true
+  news:
+    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings

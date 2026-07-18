@@ -3,6 +3,8 @@ layout: page
 title: contact
 permalink: /contact/
 description: How to reach us, and how to find our office.
+lang: en
+page_key: contact
 nav: true
 nav_order: 5
 ---
