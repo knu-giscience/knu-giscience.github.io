@@ -1,8 +1,17 @@
 <header>
+  {% assign current_lang = page.lang | default: "en" %}
+  {% assign home_permalink = "/" %}
+  {% assign other_lang = "kr" %}
+  {% assign other_home_permalink = "/kr/" %}
+  {% if current_lang == "kr" %}
+    {% assign home_permalink = "/kr/" %}
+    {% assign other_lang = "en" %}
+    {% assign other_home_permalink = "/" %}
+  {% endif %}
   <!-- Nav Bar -->
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
-      <a class="navbar-brand py-0" href="{{ site.baseurl }}/" aria-label="{{ site.title }}">
+      <a class="navbar-brand py-0" href="{{ home_permalink | relative_url }}" aria-label="{{ site.title }}">
         <img src="{{ '/assets/img/logo.png' | relative_url }}"
              alt="{{ site.title }}"
              class="lab-logo">
@@ -33,15 +42,15 @@
 
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% endif %}
+          {% for p in site.pages %}
+            {% if p.permalink == home_permalink %} {% assign about_title = p.title %} {% endif %}
           {% endfor %}
 
           <!-- About -->
-          <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
+          <li class="nav-item {% if page.permalink == home_permalink %}active{% endif %}">
+            <a class="nav-link" href="{{ home_permalink | relative_url }}">
               {{- about_title }}
-              {% if page.permalink == '/' %}
+              {% if page.permalink == home_permalink %}
                 <span class="sr-only">(current)</span>
               {% endif %}
             </a>
@@ -50,7 +59,8 @@
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
-            {% if p.nav and p.autogen == null %}
+            {% assign p_lang = p.lang | default: "en" %}
+            {% if p.nav and p.autogen == null and p_lang == current_lang %}
               {% if p.dropdown %}
                 {% assign has_active_child = false %}
                 {% for child in p.children %}
@@ -116,9 +126,22 @@
               </button>
             </li>
           {% endif %}
-          <!-- Korean: link to legacy Weebly site -->
+          <!-- Language toggle -->
+          {% assign switch_url = other_home_permalink %}
+          {% if page.page_key %}
+            {% for sp in site.pages %}
+              {% assign sp_lang = sp.lang | default: "en" %}
+              {% if sp.page_key == page.page_key and sp_lang == other_lang %}
+                {% assign switch_url = sp.url %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {% assign switch_label = "한국어" %}
+          {% if current_lang == "kr" %}
+            {% assign switch_label = "English" %}
+          {% endif %}
           <li class="nav-item">
-            <a class="nav-link" href="https://knugis.weebly.com/" target="_blank" rel="noopener" title="한국어 사이트 (Weebly)">한국어</a>
+            <a class="nav-link" href="{{ switch_url | relative_url }}">{{ switch_label }}</a>
           </li>
           {% if site.enable_darkmode %}
             <!-- Toogle theme mode -->

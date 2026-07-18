@@ -2,6 +2,8 @@
 layout: about
 title: about
 permalink: /
+lang: en
+page_key: about
 subtitle: <em>Geography that listens to data, places, and people.</em>
 
 selected_papers: true

@@ -3,6 +3,8 @@ layout: page
 permalink: /publications/
 title: publications
 description: Publications by category, in reverse chronological order.
+lang: en
+page_key: publications
 nav: true
 nav_order: 2
 ---
