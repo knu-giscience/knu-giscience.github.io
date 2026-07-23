@@ -3,7 +3,7 @@ layout: page
 title: Academic Discipline Classification Reform
 description: Survey of academic-classification systems and reform directions for Korea's standard discipline classification.
 img: assets/img/projects/classification.jpg
-importance: 7
+importance: 8
 category: completed
 period: 2024.04 – 2025.01
 sponsor: National Research Foundation of Korea (NRF)

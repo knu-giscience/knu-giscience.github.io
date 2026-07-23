@@ -4,7 +4,7 @@ title: Global-Opening Strategy for Daegu–Gyeongju–Pohang ("Daegyeongpo")
 description: Regional development strategy for the Daegu–Gyeongju–Pohang corridor, including Pohang Port logistics and the Arctic shipping route.
 img: assets/img/projects/daegyeongpo.jpg
 importance: 5
-category: ongoing
+category: completed
 period: 2024.12 – 2025.05
 sponsor: Daegu Policy Research Institute
 ---

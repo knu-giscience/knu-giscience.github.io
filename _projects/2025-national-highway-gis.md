@@ -4,7 +4,7 @@ title: National Highway Network — GIS Policy Impact Analysis
 description: Building a unified road GIS-DB and quantifying how new construction reshapes accessibility and service levels.
 img: assets/img/projects/highway.jpg
 importance: 1
-category: ongoing
+category: completed
 period: 2025.10 – 2025.12
 sponsor: Korea Research Institute for Human Settlements (KRIHS)
 ---

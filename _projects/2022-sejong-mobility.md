@@ -3,7 +3,7 @@ layout: page
 title: Sejong Mobility Big Data — Literature Review
 description: Literature review of mobility patterns by demographic and occupational segment for Sejong's mobility big data initiative.
 img: assets/img/projects/sejong.jpg
-importance: 16
+importance: 18
 category: completed
 period: 2022.11 – 2022.12
 sponsor: Korea Transport Institute (KOTI)

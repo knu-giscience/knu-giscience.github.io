@@ -4,7 +4,7 @@ title: Carbon-Neutral Priority-Zone Integrated Scenario Analysis
 description: Integrated scenarios that match spatial-typology priority zones with carbon-mitigation measures applicable to urban space.
 img: assets/img/projects/carbon.jpg
 importance: 3
-category: ongoing
+category: completed
 period: 2025.05 – 2025.10
 sponsor: Korea Research Institute for Human Settlements (KRIHS)
 ---

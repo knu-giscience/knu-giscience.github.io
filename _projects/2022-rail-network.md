@@ -3,7 +3,7 @@ layout: page
 title: 5th National Rail Network Plan — Expected Impacts
 description: Estimating expected impacts of new rail-network projects proposed under the 5th National Rail Network Plan.
 img: assets/img/projects/rail.jpg
-importance: 15
+importance: 17
 category: completed
 period: 2022.11 – 2024.05
 sponsor: Gyeongsangbuk-do Province

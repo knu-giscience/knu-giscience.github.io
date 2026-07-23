@@ -3,7 +3,7 @@ layout: page
 title: Activity-Data-based Infectious-Disease Exposure Analysis
 description: Spatio-temporal methodology to assess potential exposure to infectious diseases from personal activity data.
 img: assets/img/projects/disease.jpg
-importance: 20
+importance: 23
 category: completed
 period: 2021.09 – 2021.12
 sponsor: Korea Research Institute for Human Settlements (KRIHS)

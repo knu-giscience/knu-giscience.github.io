@@ -3,7 +3,7 @@ layout: page
 title: Regional Economic Impact of Dongdaegu Multimodal Hub
 description: Land-use and traffic-volume changes following the opening of the Dongdaegu multimodal transit centre.
 img: assets/img/projects/dongdaegu.jpg
-importance: 18
+importance: 21
 category: completed
 period: 2022.03 – 2022.04
 sponsor: Korea Transport Institute (KOTI)

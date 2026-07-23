@@ -3,7 +3,7 @@ layout: page
 title: Spatial Strategy for Carbon-Neutral Energy Sector
 description: Selecting feasible solar-power-generation areas and assessing rooftop and ground installation potential.
 img: assets/img/projects/solar.jpg
-importance: 6
+importance: 7
 category: completed
 period: 2024.05 – 2024.10
 sponsor: Korea Research Institute for Human Settlements (KRIHS)

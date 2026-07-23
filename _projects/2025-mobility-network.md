@@ -4,7 +4,7 @@ title: Network Analysis and Database for Mobility Assessment
 description: Grid-level connectivity and public-transport network analysis to support a national mobility-assessment framework.
 img: assets/img/projects/network.jpg
 importance: 4
-category: ongoing
+category: completed
 period: 2025.04 – 2025.10
 sponsor: Korea Transport Institute (KOTI)
 ---

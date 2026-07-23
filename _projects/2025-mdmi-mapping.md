@@ -4,7 +4,7 @@ title: Multi-Dimensional Mobility Index Mapping
 description: Spatial Multi-Dimensional Mobility Index (sMDMI) and nationwide maps of mobility patterns for policy use.
 img: assets/img/projects/mdmi.jpg
 importance: 2
-category: ongoing
+category: completed
 period: 2025.08 – 2026.02
 sponsor: Korea Transport Institute (KOTI)
 ---

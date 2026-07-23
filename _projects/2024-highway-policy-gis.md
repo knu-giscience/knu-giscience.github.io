@@ -3,7 +3,7 @@ layout: page
 title: National Highway Network — GIS Policy Impact (2024)
 description: GIS analysis of road-network change effects on service level, facility linkage, and accessibility.
 img: assets/img/projects/highway2.jpg
-importance: 5
+importance: 6
 category: completed
 period: 2024.08 – 2024.12
 sponsor: Korea Research Institute for Human Settlements (KRIHS)

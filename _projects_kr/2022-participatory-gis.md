@@ -14,4 +14,4 @@ A long-running NRF-funded study using participatory geographic information
 to capture how individual mobility patterns shift over multi-year horizons.
 
 **Sponsor**: 한국연구재단 (NRF)
-**Period**: 2022.09 – ongoing
+**Period**: 2022.09 – 2025.02
