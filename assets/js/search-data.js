@@ -494,6 +494,11 @@ ninja.data = [{
           description: "Building a unified road GIS-DB and quantifying how new construction reshapes accessibility and service levels.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2025-national-highway-gis/";
+            },},{id: "projects-road-network-monitoring-indicator-db-statistical-amp-gis-analysis-and-indicator-methodology",
+          title: 'Road Network Monitoring Indicator DB — Statistical &amp;amp; GIS Analysis and Indicator Methodology...',
+          description: "Statistical and GIS analysis, indicator definitions, and calculation methodology for the road-network monitoring indicator database, under the National Road Monitoring System program.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2026-road-monitoring-db/";
             },},{id: "projects_kr-국외-자율주행기반-교통약자-이동지원-서비스-실증-사례조사",
           title: '국외 자율주행기반 교통약자 이동지원 서비스 실증 사례조사',
           description: "국외 장애인, 고령자, 교통소외지역 거주자 대상 이동지원 서비스 운영, 개발 및 실증사례 조사를 진행함",
@@ -609,6 +614,11 @@ ninja.data = [{
           description: "2024년 기준 고속국도, 일반국도, 국가지원지방도의 기초 GIS-DB 구축 및 시설 데이터 갱신을 통한 도로 건설 효과 및 성과 지표 산출",
           section: "Projects_kr",handler: () => {
               window.location.href = "/kr/projects/2025-national-highway-gis/";
+            },},{id: "projects_kr-도로망-모니터링-지표-db-구축을-위한-통계-및-gis-분석-지표-정의-및-산출-방법론-연구",
+          title: '도로망 모니터링 지표 DB 구축을 위한 통계 및 GIS 분석, 지표 정의 및...',
+          description: "「국가 도로 모니터링 체계 구축 사업」의 일환으로 도로망 모니터링 지표 DB 구축을 위한 통계 분석, GIS 분석, 지표 정의 및 산출 방법론 연구를 수행함",
+          section: "Projects_kr",handler: () => {
+              window.location.href = "/kr/projects/2026-road-monitoring-db/";
             },},{
         id: 'social-orcid',
         title: 'ORCID',
