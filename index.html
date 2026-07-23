@@ -4,6 +4,22 @@
 (function() {
   var box = document.querySelector('.lab-slideshow');
   if (!box) return;
+  /* Shuffle slide order so each visit shows the photos in a random sequence */
+  var shuffled = Array.prototype.slice.call(box.querySelectorAll('.slide'));
+  if (shuffled.length > 1) {
+    for (var i = shuffled.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = tmp;
+    }
+    var navPrev = box.querySelector('.ss-nav.prev');
+    shuffled.forEach(function(s) {
+      s.classList.remove('active');
+      box.insertBefore(s, navPrev);
+    });
+    shuffled[0].classList.add('active');
+    var firstImg = shuffled[0].querySelector('img');
+    if (firstImg) firstImg.loading = 'eager';
+  }
   var slides = box.querySelectorAll('.slide');
   var dots = box.querySelectorAll('.dot');
   var idx = 0;
