@@ -1,7 +1,9 @@
+# 사진 파일과 image_position(원형 크롭 위치)은 영문판 members.yml과 동일하게 유지할 것
 pi:
   - name: 이재현(Jae Hyun Lee)
     role: 부교수
-    image: /assets/img/kr/prof_pic-1.jpg
+    image: prof_pic.jpg
+    image_position: "center 30%"
     interests: 교통지리, 공간 빅데이터, 지리정보과학
     education: |-
       경희대학교 지리학과, 이학사
@@ -13,14 +15,16 @@ phd:
   - name: 이지현(Jihyun Lee)
     role: 일반대학원 지리학과 박사과정
     since: 2017-1
-    image: /assets/img/kr/jihyun_lee.jpg
+    image: members/jihyun_lee.jpg
+    image_position: "center 28%"
     email: leejh930929@gmail.com
     interests: 행태지리
     note: 한국국토정보공사(LX) 재직
   - name: 최수정(Soojeong Choi)
     role: 일반대학원 지리학과 박사과정
     since: 2025-1
-    image: /assets/img/kr/soojeong_choi.jpg
+    image: members/soojeong_choi.jpg
+    image_position: "center 30%"
     email: sjeongchoi21@gmail.com
     interests: " 활동-통행 행태, 시공간 지리학, 행태 모델링"
     note: 한국교통연구원(KOTI) 재직
@@ -28,41 +32,39 @@ ms:
   - name: 조민영(Minyeong Cho)
     role: 일반대학원 지리학과 석사과정
     since: 2022-1
-    image: /assets/img/kr/minyeong_cho.jpg
+    image: members/minyeong_cho.jpg
+    image_position: "25% 30%"
     email: ​mineito@naver.com
     interests: 행태지리, 재난·재해, GIS
-  - name: 김명환(Myeonghwan Kim)
-    role: 일반대학원 지리학과 석사과정
-    since: 2025-1
-    image: /assets/img/kr/myeonghwan_kim.jpg
-    email: kmw1674@naver.com
-    interests: GIS, 시공간분석, 교통형평성
-    note: 국토연구원(KRIHS) 재직
   - name: 최민정(Minjeong Choi)
     role: 일반대학원 지리학과 석사과정
     since: 2026-1
-    image: /assets/img/kr/minjeong_choi.jpg
+    image: members/minjeong_choi.jpg
+    image_position: "center 28%"
     email: min030420@knu.ac.kr
     interests: GIS, 교통지리
   - name: 정연우(Yeonwoo Jung)
     role: 일반대학원 지리학과 석사과정
     since: 2026-1
-    image: /assets/img/kr/yw_pic.jpg
+    image: members/yeonwoo_jung.jpg
+    image_position: "60% 25%"
     email: yeonwoo.jung91@gmail.com
     interests: GIS, 교통지리, 행태지리
-ug:
-  - name: 황찬범(Chanbum Hwang)
-    role: 지리학과 학석사연계과정
-    since: 2025-2
-    image: /assets/img/kr/chanbum_hwang.jpg
-    email: cksqjahwang@knu.ac.kr
-    interests: GIS, 교통지리, 도시지리
 alumni:
   - name: 심지윤(Jiyun Shim)
     role: 지리학 석사 (2022-1 졸업)
-    image: /assets/img/kr/jiyun_shim.jpg
+    image: members/jiyun_shim.jpg
+    image_position: "center 25%"
     note: 한국교통연구원(KOTI) 재직
   - name: 정다빈(Dabin Jeong)
     role: 지리학 석사 (2023-2 졸업)
-    image: /assets/img/kr/dabin_jeong.jpg
+    image: members/dabin_jeong.jpg
+    image_position: "center 25%"
     note: 한국교통연구원(KOTI) 재직
+  - name: 김명환(Myeonghwan Kim)
+    role: 지리학 석사
+    image: members/myeonghwan_kim.jpg
+    image_position: "70% 30%"
+    email: kmw1674@naver.com
+    interests: GIS, 시공간분석, 교통형평성
+    note: 국토연구원(KRIHS) 재직

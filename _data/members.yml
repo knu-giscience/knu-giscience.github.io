@@ -45,14 +45,6 @@ ms:
     email:
     interests: Behavioral Geography, Disasters, GIS
 
-  - name: Myeonghwan Kim
-    role: MS Student
-    since: 2025-1
-    image: members/myeonghwan_kim.jpg
-    image_position: "70% 30%"
-    email:
-    interests: GIS, Transportation Geography, Transport Equity
-
   - name: Minjeong Choi
     role: MS Student
     since: 2026-1
@@ -69,15 +61,6 @@ ms:
     email:
     interests: GIS
 
-ug:
-  - name: Chanbum Hwang
-    role: BS+MS Combined Program
-    since: 2025-2
-    image: members/chanbum_hwang.jpg
-    image_position: "center 22%"
-    email:
-    interests: GIS, Transportation Geography, Urban Geography
-
 alumni:
   - name: Jiyun Shim
     role: MS (graduated 2022-1)
@@ -90,3 +73,9 @@ alumni:
     image: members/dabin_jeong.jpg
     image_position: "center 25%"
     note: Currently at the Korea Transport Institute (KOTI)
+
+  - name: Myeonghwan Kim
+    role: MS
+    image: members/myeonghwan_kim.jpg
+    image_position: "70% 30%"
+    note: Currently at the Korea Research Institute for Human Settlements (KRIHS)
