@@ -14,7 +14,7 @@ nav_order: 2
 ## I. Refereed Journal Articles
 
 <div class="publications">
-{% bibliography -f 01_journal %}
+{% bibliography -f 01_journal_kr %}
 </div>
 
 ## II. Peer-reviewed Book Chapters
