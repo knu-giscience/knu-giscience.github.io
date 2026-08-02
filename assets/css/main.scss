@@ -37,3 +37,6 @@
 @use "font-awesome/brands";
 @use "font-awesome/solid";
 @use "font-awesome/regular";
+
+// Grid & Ink design layer — keep last so it overrides the partials above
+@use "grid_ink";

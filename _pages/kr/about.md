@@ -26,37 +26,29 @@ latest_posts:
   .pillars {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 18px;
     margin: 1.5rem 0 2.6rem;
-    border-top: 1px solid var(--global-divider-color, #e5e5e5);
   }
   @media (min-width: 760px) {
-    .pillars { grid-template-columns: repeat(3, 1fr); border-top: none; }
+    .pillars { grid-template-columns: repeat(3, 1fr); }
   }
   .pillar {
-    padding: 1.5rem 1.6rem;
-    border-bottom: 1px solid var(--global-divider-color, #e5e5e5);
-    transition: background-color .2s ease;
+    background: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color, #e5e5e5);
+    border-top: 4px solid var(--global-theme-color);
+    border-radius: 6px;
+    padding: 1.25rem 1.35rem;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
   }
-  @media (min-width: 760px) {
-    .pillar {
-      border-bottom: none;
-      border-right: 1px solid var(--global-divider-color, #e5e5e5);
-      padding: 0 1.6rem 0.4rem 0;
-    }
-    .pillar:last-child { border-right: none; padding-right: 0; }
-    .pillar:first-child { padding-left: 0; }
-    .pillar:not(:first-child) { padding-left: 1.6rem; }
-  }
-  .pillar:hover { background-color: rgba(127,127,127,0.06); }
+  .pillar:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(16, 24, 40, 0.1); }
 
   .pillar-num {
-    font-family: "Roboto Slab", Georgia, serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.18em;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
     color: var(--global-theme-color);
-    margin-bottom: 0.5rem;
-    font-weight: 700;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
   }
   .pillar h3 {
     font-size: 1.25rem;
@@ -76,20 +68,24 @@ latest_posts:
   .home-cta {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem 1.6rem;
-    font-size: 0.95rem;
+    gap: 12px;
+    font-size: 0.9rem;
     margin: 0 0 2rem;
-    padding: 0.9rem 0 1rem;
-    border-top: 1px solid var(--global-divider-color, #e5e5e5);
-    border-bottom: 1px solid var(--global-divider-color, #e5e5e5);
+    padding: 0;
+    border: 0;
   }
   .home-cta a {
-    color: inherit;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom-color .15s ease;
+    background: var(--global-theme-color);
+    color: var(--global-bg-color);
+    border-radius: 999px;
+    padding: 0.6rem 1.35rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 0;
+    transition: filter .15s ease;
   }
-  .home-cta a:hover { border-bottom-color: currentColor; }
-  .home-cta .arrow { color: var(--global-theme-color); margin-right: 0.3rem; font-weight: 700; }
+  .home-cta a:hover { border-bottom: 0; filter: brightness(0.92); color: var(--global-bg-color); text-decoration: none; }
+  .home-cta .arrow { color: inherit; margin-right: 0.3rem; font-weight: 700; }
 
   /* Tweaks for the auto-rendered news / selected publications headings */
   article > h2 {
@@ -113,13 +109,17 @@ latest_posts:
   /* ---------- Slideshow ---------- */
   .lab-slideshow {
     position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
+    width: 100vw;
+    left: 50%;
+    margin: 0.8rem 0 2.4rem -50vw;  /* full-bleed hero under the title */
+    height: 540px;
     overflow: hidden;
-    border-radius: 10px;
-    margin: 0.8rem 0 2.4rem;  /* sits right under the hero */
+    border-radius: 0;
     background: #1a1f3a;
-    box-shadow: 0 6px 22px rgba(44, 50, 96, 0.12);
+    box-shadow: 0 14px 40px rgba(16, 24, 40, 0.16);
+  }
+  @media (max-width: 760px) {
+    .lab-slideshow { height: 300px; }
   }
   .lab-slideshow .slide {
     position: absolute;

@@ -1,0 +1,220 @@
+/*******************************************************************************
+ * Grid & Ink — site-wide design layer (loaded last so it wins ties with the
+ * stock theme partials). Fonts are limited to three families:
+ * Pretendard (body/UI) · Space Grotesk (latin display) · IBM Plex Mono (accents).
+ ******************************************************************************/
+
+:root {
+  --gi-sans: "Pretendard", "Noto Sans KR", -apple-system, "Segoe UI", sans-serif;
+  --gi-disp: "Space Grotesk", "Pretendard", "Noto Sans KR", sans-serif;
+  --gi-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+  --gi-ink: #101828;
+  --gi-teal-bright: #2dd4bf;
+  --gi-grid-line: rgba(16, 24, 40, 0.028);
+  --gi-pill-bg: #101828;
+  --gi-pill-fg: #ffffff;
+  --gi-shadow: rgba(16, 24, 40, 0.09);
+}
+
+html[data-theme="dark"] {
+  --gi-grid-line: rgba(226, 232, 240, 0.04);
+  --gi-pill-bg: #e2e8f0;
+  --gi-pill-fg: #0b1220;
+  --gi-shadow: rgba(0, 0, 0, 0.45);
+}
+
+/* the full-bleed hero uses the 100vw trick — clip the resulting overflow */
+html {
+  overflow-x: clip;
+}
+
+body {
+  font-family: var(--gi-sans);
+  line-height: 1.68;
+  /* graticule motif */
+  background-image:
+    linear-gradient(var(--gi-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--gi-grid-line) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--gi-disp);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+::selection {
+  background: rgba(45, 212, 191, 0.28);
+}
+
+/* ---- header: ink band (same in light and dark) ---- */
+.navbar {
+  background: var(--gi-ink) !important;
+  border-bottom: 1px solid #1d2939;
+  box-shadow: none !important;
+}
+.navbar-brand,
+.navbar-brand span,
+.navbar-brand div {
+  color: #ffffff !important;
+  font-family: var(--gi-disp);
+  font-weight: 700;
+}
+.navbar-brand img {
+  filter: brightness(0) invert(1);
+}
+.navbar-brand::after {
+  content: "35.89\00B0 N 128.61\00B0 E";
+  font-family: var(--gi-mono);
+  font-size: 0.62rem;
+  color: #64748b;
+  margin-left: 0.7rem;
+  letter-spacing: 0.06em;
+  vertical-align: middle;
+}
+.navbar .nav-link {
+  color: #cbd5e1 !important;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+.navbar .nav-item.active .nav-link {
+  color: #ffffff !important;
+  box-shadow: inset 0 -2px 0 var(--gi-teal-bright);
+}
+.navbar-toggler .icon-bar {
+  background-color: #e2e8f0 !important;
+}
+@media (max-width: 575.98px) {
+  .navbar-collapse {
+    background: var(--gi-ink);
+  }
+}
+
+/* ---- page title ---- */
+.post-title {
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+.post-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 5px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--global-theme-color), var(--gi-teal-bright));
+  margin-top: 12px;
+}
+.post-description {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--global-theme-color);
+}
+
+/* ---- section headings: left teal bar ---- */
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2.6rem;
+  padding-left: 0.8rem;
+  border-left: 5px solid var(--global-theme-color);
+}
+
+/* ---- bibliography: full-width card list ---- */
+.publications ol.bibliography {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+.publications ol.bibliography > li {
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  padding: 1rem 1.15rem;
+  margin: 0;
+  transition: transform 0.16s, box-shadow 0.16s, border-color 0.16s;
+}
+.publications ol.bibliography > li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px var(--gi-shadow);
+  border-color: #cbd5e1;
+}
+/* the empty thumbnail (abbr) column squeezes titles — drop it, use full width */
+.publications .row > .abbr {
+  display: none;
+}
+.publications .row > .col-sm-8,
+.publications .row > .col-sm-10 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.publications .title {
+  font-weight: 600;
+  font-size: 0.99rem;
+  line-height: 1.5;
+}
+.publications .author {
+  font-size: 0.85rem;
+  color: var(--global-text-color-light);
+  margin-top: 0.25rem;
+}
+.publications .periodical {
+  font-size: 0.82rem;
+  color: var(--global-theme-color);
+  margin-top: 0.2rem;
+}
+
+/* year pill badges — overrides the stock right-aligned pale year headings */
+h2.bibliography,
+.publications h2.bibliography {
+  display: inline-block;
+  font-family: var(--gi-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gi-pill-fg);
+  border: 0;
+  border-radius: 999px;
+  padding: 0.22rem 0.95rem;
+  background: var(--gi-pill-bg);
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* ---- inputs (bib search) ---- */
+input[type="text"],
+input[type="search"] {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 999px;
+  padding-left: 1rem;
+  background: var(--global-card-bg-color);
+  color: var(--global-text-color);
+}
+input[type="text"]:focus,
+input[type="search"]:focus {
+  border-color: var(--global-theme-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(14, 124, 102, 0.14);
+}
+
+/* ---- footer ---- */
+footer.fixed-bottom {
+  background: var(--global-bg-color);
+  border-top: 1px solid var(--global-divider-color);
+  font-size: 0.78rem;
+  color: var(--global-text-color-light);
+}
+footer.fixed-bottom a {
+  color: var(--global-theme-color);
+}
