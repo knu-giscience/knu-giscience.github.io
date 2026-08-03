@@ -115,8 +115,7 @@ latest_posts:
     height: 540px;
     overflow: hidden;
     border-radius: 0;
-    background: #1a1f3a;
-    box-shadow: 0 14px 40px rgba(16, 24, 40, 0.16);
+    background: var(--global-bg-color);
   }
   @media (max-width: 760px) {
     .lab-slideshow { height: 300px; }
@@ -130,7 +129,7 @@ latest_posts:
   }
   .lab-slideshow .slide.active { opacity: 1; pointer-events: auto; }
   .lab-slideshow .slide img {
-    width: 100%; height: 100%; object-fit: cover;
+    width: 100%; height: 100%; object-fit: contain;
     display: block;
   }
   .lab-slideshow .ss-nav {
@@ -139,8 +138,8 @@ latest_posts:
     width: 38px; height: 38px;
     border: none;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.7);
-    color: #2c3260;
+    background: rgba(16, 24, 40, 0.55);
+    color: #ffffff;
     font-size: 1.4rem; font-weight: 700;
     line-height: 1;
     cursor: pointer;
@@ -148,7 +147,7 @@ latest_posts:
     opacity: 0; transition: opacity .2s ease, background .2s ease;
   }
   .lab-slideshow:hover .ss-nav { opacity: 1; }
-  .lab-slideshow .ss-nav:hover { background: white; }
+  .lab-slideshow .ss-nav:hover { background: rgba(16, 24, 40, 0.8); }
   .lab-slideshow .ss-nav.prev { left: 12px; }
   .lab-slideshow .ss-nav.next { right: 12px; }
   .lab-slideshow .dots {
@@ -160,12 +159,13 @@ latest_posts:
   .lab-slideshow .dot {
     width: 8px; height: 8px;
     border-radius: 50%;
-    background: rgba(255,255,255,0.45);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(16, 24, 40, 0.35);
     cursor: pointer;
     transition: background .2s ease, transform .2s ease;
   }
   .lab-slideshow .dot:hover { transform: scale(1.3); }
-  .lab-slideshow .dot.active { background: white; }
+  .lab-slideshow .dot.active { background: var(--global-theme-color); border-color: var(--global-theme-color); }
 </style>
 
 <div class="lab-slideshow" aria-label="Lab life">
