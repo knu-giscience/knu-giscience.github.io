@@ -74,9 +74,11 @@ nav_order: 3
     margin-top: 0.9rem;
   }
   .thumb {
-    width: 220px;
     height: 220px;
-    object-fit: cover;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    background: var(--global-bg-color);
     border-radius: 6px;
     cursor: zoom-in;
     border: 1px solid var(--global-divider-color, #ddd);
