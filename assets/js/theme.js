@@ -265,16 +265,10 @@ let transTheme = () => {
   }, 500);
 };
 
-// Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "light" so first-time visitors always get the white
-// background regardless of their OS color scheme; the toggle can still switch
-// to dark or system.
+// Dark mode is disabled site-wide: always render the light theme, ignoring any
+// previously stored preference and the OS color scheme.
 let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
-  if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
-    themeSetting = "light";
-  }
-  return themeSetting;
+  return "light";
 };
 
 // Determine the computed theme, which can be "dark" or "light". If the theme setting is
