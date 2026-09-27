@@ -11,14 +11,14 @@ ninja.data = [{
     },
   },{id: "nav-members",
           title: "members",
-          description: "People at the GIScience &amp; Spatial Bigdata Lab.",
+          description: "People at the GIScience &amp; Geospatial Big Data Lab.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/kr/members/";
           },
         },{id: "nav-members",
           title: "members",
-          description: "People at the GIScience &amp; Spatial Bigdata Lab.",
+          description: "People at the GIScience &amp; Geospatial Big Data Lab.",
           section: "Navigation",
           handler: () => {
             window.location.href = "/members/";

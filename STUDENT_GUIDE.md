@@ -1,6 +1,6 @@
 # 연구실 홈페이지 편집 가이드 (학생용)
 
-이 문서는 GIScience & Spatial Bigdata Lab 영문 홈페이지를 직접 편집하는
+이 문서는 GIScience & Geospatial Big Data Lab 영문 홈페이지를 직접 편집하는
 방법을 설명합니다. **GitHub, 마크다운, BibTeX를 몰라도 됩니다.** 폼만
 채우면 됩니다.
 
