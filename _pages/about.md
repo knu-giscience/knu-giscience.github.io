@@ -166,6 +166,40 @@ latest_posts:
   }
   .lab-slideshow .dot:hover { transform: scale(1.3); }
   .lab-slideshow .dot.active { background: var(--global-theme-color); border-color: var(--global-theme-color); }
+  /* 연구실 영상: YouTube 퍼가기(영상 파일은 저장소에 두지 않음 — GitHub는 100 MiB 넘는 파일을 받지 않음) */
+  .lab-videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 0 0 2.4rem;
+  }
+  @media (min-width: 760px) {
+    .lab-videos { grid-template-columns: repeat(2, 1fr); }
+  }
+  .lab-video { margin: 0; }
+  .lab-video-frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #0b0c14;
+    border: 1px solid var(--global-divider-color, #e5e5e5);
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .lab-video-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .lab-video figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.45;
+    color: var(--global-text-color-light, #667085);
+  }
+  .lab-video .vid-num {
+    display: block;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    color: var(--global-theme-color);
+    margin-bottom: 0.15rem;
+  }
 </style>
 
 <div class="lab-slideshow" aria-label="Lab life">
@@ -197,6 +231,21 @@ latest_posts:
   spatial big data, and mobility — to understand how cities, regions, and
   people move and change.
 </p>
+
+<div class="lab-videos">
+  <figure class="lab-video">
+    <div class="lab-video-frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/FLhtST4kxpg?rel=0" title="General Introduction of KNU GIScience &amp; Geospatial Big Data Lab." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <figcaption><span class="vid-num">VIDEO 01 · 1:26</span>General Introduction of KNU GIScience &amp; Geospatial Big Data Lab.</figcaption>
+  </figure>
+  <figure class="lab-video">
+    <div class="lab-video-frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/y6Pj1PW8inI?rel=0" title="KNU GIScience &amp; Geospatial Big Data Lab." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <figcaption><span class="vid-num">VIDEO 02 · 1:25</span>KNU GIScience &amp; Geospatial Big Data Lab.</figcaption>
+  </figure>
+</div>
 
 <div class="pillars">
   <div class="pillar">
