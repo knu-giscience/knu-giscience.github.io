@@ -225,13 +225,6 @@ latest_posts:
   </div>
 </div>
 
-<p class="home-intro">
-  We are a research lab at the <strong>Department of Geography, Kyungpook
-  National University</strong>, working at the intersection of GIScience,
-  spatial big data, and mobility — to understand how cities, regions, and
-  people move and change.
-</p>
-
 <div class="lab-videos">
   <figure class="lab-video">
     <div class="lab-video-frame">
@@ -246,6 +239,13 @@ latest_posts:
     <figcaption><span class="vid-num">VIDEO 02 · 1:25</span>KNU GIScience &amp; Geospatial Big Data Lab.</figcaption>
   </figure>
 </div>
+
+<p class="home-intro">
+  We are a research lab at the <strong>Department of Geography, Kyungpook
+  National University</strong>, working at the intersection of GIScience,
+  spatial big data, and mobility — to understand how cities, regions, and
+  people move and change.
+</p>
 
 <div class="pillars">
   <div class="pillar">
