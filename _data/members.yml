@@ -59,7 +59,7 @@ ms:
     image: members/yeonwoo_jung.jpg
     image_position: "60% 25%"
     email:
-    interests: GIS
+    interests: GIS, Transportation Geography, Behavioral Geography
 
 alumni:
   - name: Jiyun Shim
@@ -75,7 +75,7 @@ alumni:
     note: Currently at the Korea Transport Institute (KOTI)
 
   - name: Myeonghwan Kim
-    role: MS
+    role: MS (graduated 2026-1)
     image: members/myeonghwan_kim.jpg
     image_position: "70% 30%"
     note: Currently at the Korea Research Institute for Human Settlements (KRIHS)
