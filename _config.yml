@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: GIScience & Spatial Bigdata Lab # the website title (if blank, full name will be used instead)
+title: GIScience & Geospatial Big Data Lab # the website title (if blank, full name will be used instead)
 first_name: Jae Hyun
 middle_name:
 last_name: Lee
@@ -10,11 +10,11 @@ contact_note: >
   Department of Geography, Kyungpook National University, 80 Daehak-ro, Buk-gu, Daegu, Republic of Korea.
   Tel: 053-950-7173.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  GIScience & Spatial Bigdata Lab at the Department of Geography,
+  GIScience & Geospatial Big Data Lab at the Department of Geography,
   Kyungpook National University. We study geographic information science,
   spatial big data, and mobility for cities and regions.
 footer_text: >
-  © GIScience & Spatial Bigdata Lab, Kyungpook National University.
+  © GIScience & Geospatial Big Data Lab, Kyungpook National University.
   Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and the
   <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.

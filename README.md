@@ -1,6 +1,6 @@
-# GIScience & Spatial Bigdata Lab — Website
+# GIScience & Geospatial Big Data Lab — Website
 
-Source code for the website of the **GIScience & Spatial Bigdata Lab**,
+Source code for the website of the **GIScience & Geospatial Big Data Lab**,
 Department of Geography, Kyungpook National University.
 
 🌐 **Live site**: <https://knu-giscience.github.io/>

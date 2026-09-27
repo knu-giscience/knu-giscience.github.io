@@ -2,7 +2,7 @@
 layout: page
 title: members
 permalink: /members/
-description: People at the GIScience & Spatial Bigdata Lab.
+description: People at the GIScience & Geospatial Big Data Lab.
 lang: en
 page_key: members
 nav: true

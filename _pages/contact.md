@@ -11,7 +11,7 @@ nav_order: 5
 
 ## Address
 
-**GIScience & Spatial Bigdata Lab**
+**GIScience & Geospatial Big Data Lab**
 Department of Geography, College of Social Sciences
 Kyungpook National University
 80 Daehak-ro, Buk-gu, Daegu 41566, Republic of Korea

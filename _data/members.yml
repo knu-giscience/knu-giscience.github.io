@@ -1,4 +1,4 @@
-# GIScience & Spatial Bigdata Lab — Members
+# GIScience & Geospatial Big Data Lab — Members
 # image_position controls how the photo is cropped to a circle on the
 # members page. Use CSS `object-position` syntax (e.g. "center 30%",
 # "70% 25%", "left top").
@@ -35,6 +35,7 @@ phd:
     image_position: "center 30%"
     email:
     interests: Activity-Travel Behavior, Time Geography, Behavioral Modeling
+    note: MS (graduated 2024-2) · Currently at the Korea Transport Institute (KOTI)
 
 ms:
   - name: Minyeong Cho
