@@ -228,15 +228,15 @@ latest_posts:
 <div class="lab-videos">
   <figure class="lab-video">
     <div class="lab-video-frame">
-      <iframe src="https://www.youtube-nocookie.com/embed/FLhtST4kxpg?rel=0" title="General Introduction of KNU GIScience &amp; Geospatial Big Data Lab." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/CG0FhYqKntc?rel=0" title="GIScience &amp; Geospatial Big Data Lab | Kyungpook National University, Korea" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <figcaption><span class="vid-num">VIDEO 01 · 1:26</span>General Introduction of KNU GIScience &amp; Geospatial Big Data Lab.</figcaption>
+    <figcaption><span class="vid-num">VIDEO 01 · 1:25</span>GIScience &amp; Geospatial Big Data Lab | Kyungpook National University, Korea</figcaption>
   </figure>
   <figure class="lab-video">
     <div class="lab-video-frame">
-      <iframe src="https://www.youtube-nocookie.com/embed/y6Pj1PW8inI?rel=0" title="KNU GIScience &amp; Geospatial Big Data Lab." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/YDglJEsVAE0?rel=0" title="Introduction to the GIScience &amp; Geospatial Big Data Lab | Kyungpook National University" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <figcaption><span class="vid-num">VIDEO 02 · 1:25</span>KNU GIScience &amp; Geospatial Big Data Lab.</figcaption>
+    <figcaption><span class="vid-num">VIDEO 02 · 1:26</span>Introduction to the GIScience &amp; Geospatial Big Data Lab | Kyungpook National University</figcaption>
   </figure>
 </div>
 

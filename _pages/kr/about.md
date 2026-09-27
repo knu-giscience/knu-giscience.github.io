@@ -228,15 +228,15 @@ latest_posts:
 <div class="lab-videos">
   <figure class="lab-video">
     <div class="lab-video-frame">
-      <iframe src="https://www.youtube-nocookie.com/embed/FLhtST4kxpg?rel=0" title="General Introduction of KNU GIScience &amp; Geospatial Big Data Lab." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/y6Pj1PW8inI?rel=0" title="경북대 지리학과 지리정보과학 및 공간빅데이터 연구실" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <figcaption><span class="vid-num">VIDEO 01 · 1:26</span>General Introduction of KNU GIScience &amp; Geospatial Big Data Lab.</figcaption>
+    <figcaption><span class="vid-num">VIDEO 01 · 1:25</span>경북대 지리학과 지리정보과학 및 공간빅데이터 연구실</figcaption>
   </figure>
   <figure class="lab-video">
     <div class="lab-video-frame">
-      <iframe src="https://www.youtube-nocookie.com/embed/y6Pj1PW8inI?rel=0" title="KNU GIScience &amp; Geospatial Big Data Lab." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube-nocookie.com/embed/QRTijln8fQY?rel=0" title="경북대 지리학과 지리정보과학 및 공간빅데이터 연구실 소개" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
-    <figcaption><span class="vid-num">VIDEO 02 · 1:25</span>KNU GIScience &amp; Geospatial Big Data Lab.</figcaption>
+    <figcaption><span class="vid-num">VIDEO 02 · 1:26</span>경북대 지리학과 지리정보과학 및 공간빅데이터 연구실 소개</figcaption>
   </figure>
 </div>
 
