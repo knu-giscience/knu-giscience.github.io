@@ -164,6 +164,15 @@ h2 {
   font-size: 0.99rem;
   line-height: 1.5;
 }
+/* 제목 링크(원문 DOI): 평소에는 본문 글자색, 가리키면 강조색 밑줄 */
+.publications .title a {
+  color: inherit;
+  text-decoration: none;
+}
+.publications .title a:hover {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+}
 .publications .author {
   font-size: 0.85rem;
   color: var(--global-text-color-light);

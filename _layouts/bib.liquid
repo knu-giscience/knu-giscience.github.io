@@ -48,7 +48,16 @@
   <!-- Entry bib key -->
   <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
     <!-- Title -->
-    <div class="title">{{ entry.title }}</div>
+    <div class="title">
+      {%- comment -%} 제목을 누르면 원문(DOI, 없으면 html 주소)으로 {%- endcomment -%}
+      {%- if entry.doi -%}
+        <a href="https://doi.org/{{ entry.doi }}">{{ entry.title }}</a>
+      {%- elsif entry.html contains '://' -%}
+        <a href="{{ entry.html }}">{{ entry.title }}</a>
+      {%- else -%}
+        {{ entry.title }}
+      {%- endif -%}
+    </div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
@@ -67,6 +76,17 @@
             {% assign author_is_self = true %}
           {% endif %}
         {%- endif -%}
+        {%- comment -%} 연구실 구성원·졸업생 이름에도 밑줄(_data/lab_authors.yml) {%- endcomment -%}
+        {%- assign author_full = author.first | append: ' ' | append: author_last_name | strip -%}
+        {% if site.data.lab_authors.en contains author_full %}
+          {% assign author_is_self = true %}
+        {% endif %}
+        {%- comment -%} 국문 서지는 저자를 "홍길동, 이재현" 한 덩어리로 적어 두었으므로 쉼표로 나눠 이름마다 확인 {%- endcomment -%}
+        {% assign author_ko_list = false %}
+        {%- if author_full contains ', ' -%}
+          {% assign author_ko_list = true %}
+          {%- assign author_ko_names = author_full | split: ', ' -%}
+        {%- endif -%}
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}
@@ -84,7 +104,12 @@
           {%- endif %}
           {%- if forloop.last and author_array_limit == author_array_size %}and {% endif -%}
         {% endif %}
-        {%- if author_is_self -%}
+        {%- if author_ko_list -%}
+          {%- for ko_name in author_ko_names -%}
+            {%- unless forloop.first %}, {% endunless -%}
+            {%- if site.data.lab_authors.ko contains ko_name -%}<em>{{ ko_name }}</em>{%- else -%}{{ ko_name }}{%- endif -%}
+          {%- endfor -%}
+        {%- elsif author_is_self -%}
           <em>
             {{- author.first }}
             {{ author_last_html -}}

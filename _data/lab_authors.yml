@@ -1,0 +1,18 @@
+# 논문 목록(_layouts/bib.liquid)에서 밑줄을 긋는 연구실 구성원·졸업생 이름. 홈페이지 구성원 명단(members_kr.yml·members.yml) 기준.
+# en: 영문 서지에 적힌 표기를 "이름 성" 순서로(같은 사람의 다른 표기도 모두 적는다).
+# ko: 국문 서지(저자를 "홍길동, 이재현"처럼 한 줄로 적은 항목)의 한글 이름.
+# 새 구성원이 들어오거나 서지에 새 표기가 생기면 여기에 더한다. 머리글자 표기(D. Jeong 등)는 원문 저자와 대조한 뒤에만 넣는다.
+en:
+  - Jae Hyun Lee
+  - Jihyun Lee
+  - Ji Hyeon Lee      # lee2025crime 영문 서지 표기(이지현)
+  - Soojeong Choi
+  - Soo Jeong Choi    # kim2025industrial 영문 서지 표기(최수정)
+  - Minyeong Cho
+  - Minjeong Choi
+  - Yeonwoo Jung
+  - Jiyun Shim
+  - Dabin Jeong
+  - D. Jeong          # kim2025ev_fires(Energy 2025) — Crossref 저자 이름 "Dabin Jeong"으로 확인
+  - Myeonghwan Kim
+ko: [이재현, 이지현, 최수정, 조민영, 최민정, 정연우, 심지윤, 정다빈, 김명환]
