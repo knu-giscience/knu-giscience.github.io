@@ -17,7 +17,7 @@ nav_order: 5
 ## Reach Us
 
 - **Phone**: 053-950-7173
-- **Email**: member 페이지를 참고해주세요
+- **Email**: [giscience@knu.ac.kr](mailto:giscience@knu.ac.kr)
 - **Department of Geography, KNU**: [https://geog.knu.ac.kr/](https://geog.knu.ac.kr/)
 
 ## Find Us

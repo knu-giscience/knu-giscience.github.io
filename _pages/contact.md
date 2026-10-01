@@ -19,7 +19,7 @@ Kyungpook National University
 ## Reach Us
 
 - **Phone**: +82-53-950-7173
-- **Email**: see members page for individual contacts
+- **Email**: <giscience@knu.ac.kr>
 - **Department of Geography, KNU**: <https://geog.knu.ac.kr/>
 
 ## Find Us
